@@ -16,7 +16,7 @@ pub mod screenshots {
         let client = crate::client::get_client();
         client.screenshots().add_screenshot_to_library(
             Path::new(&filename),
-            thumbnail_filename.map(|f| Path::new(f)),
+            thumbnail_filename.as_ref().map(|f| Path::new(f)),
             width,
             height
         ).map_err(|e| Error::from_reason(e.to_string()))
