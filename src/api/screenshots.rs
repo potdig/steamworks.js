@@ -4,7 +4,6 @@ use napi_derive::napi;
 pub mod screenshots {
     #[napi]
     pub fn add_screenshot_to_library(
-        &self,
         filename: String,
         thumbnail_filename: Option<String>,
         width: i32,
