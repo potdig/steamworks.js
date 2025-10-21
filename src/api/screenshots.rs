@@ -8,8 +8,8 @@ pub mod screenshots {
     pub fn add_screenshot_to_library(
         filename: String,
         thumbnail_filename: Option<String>,
-        width: i32,
-        height: i32,
+        width: u32,
+        height: u32,
     ) -> Result<u32, Error> {
         let client = crate::client::get_client();
         client.screenshots().add_screenshot_to_library(
