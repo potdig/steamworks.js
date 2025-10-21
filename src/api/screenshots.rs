@@ -1,0 +1,22 @@
+use napi_derive::napi;
+
+#[napi]
+pub mod screenshots {
+    #[napi]
+    pub fn add_screenshot_to_library(
+        &self,
+        filename: String,
+        thumbnail_filename: Option<String>,
+        width: i32,
+        height: i32,
+    ) -> Result<ScreenshotHandle, ScreenshotLibraryAddError> {
+        let client = crate::client::get_client();
+        client.screenshots().add_screenshot_to_library(
+            Path::new(&filename),
+            thumbnail_filename.map(|f| Path::new(&f)),
+            width,
+            height
+        );
+    }
+
+}
