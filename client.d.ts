@@ -210,6 +210,9 @@ export declare namespace overlay {
   export function activateToWebPage(url: string): void
   export function activateToStore(appId: number, flag: StoreFlag): void
 }
+export declare namespace screenshots {
+  export function addScreenshotToLibrary(filename: string, thumbnailFilename: string | null, width: number, height: number): number
+}
 export declare namespace stats {
   export function getInt(name: string): number | null
   export function setInt(name: string, value: number): boolean
