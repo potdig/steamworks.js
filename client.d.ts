@@ -211,10 +211,7 @@ export declare namespace overlay {
   export function activateToStore(appId: number, flag: StoreFlag): void
 }
 export declare namespace screenshots {
-  export function addScreenshotToLibrary(filename: string, thumbnailFilename: string | null, width: number, height: number): ScreenshotHandle
-  export class ScreenshotHandle {
-    
-  }
+  export function addScreenshotToLibrary(filename: string, thumbnailFilename: string | null, width: number, height: number): number
 }
 export declare namespace stats {
   export function getInt(name: string): number | null
