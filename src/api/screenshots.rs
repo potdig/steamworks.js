@@ -1,10 +1,10 @@
 use napi_derive::napi;
-use steamworks::screenshots::ScreenshotHandle;
-use steamworks::screenshots::ScreenshotLibraryAddError;
-use std::path::Path;
 
 #[napi]
 pub mod screenshots {
+    use steamworks::screenshots::ScreenshotHandle;
+    use steamworks::screenshots::ScreenshotLibraryAddError;
+    use std::path::Path;
     #[napi]
     pub fn add_screenshot_to_library(
         filename: String,
