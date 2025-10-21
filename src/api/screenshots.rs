@@ -1,7 +1,7 @@
 use napi_derive::napi;
-use steamworks::screenshots::ScreenshotHandle
-use steamworks::screenshots::ScreenshotLibraryAddError
-use std::path::Path
+use steamworks::screenshots::ScreenshotHandle;
+use steamworks::screenshots::ScreenshotLibraryAddError;
+use std::path::Path;
 
 #[napi]
 pub mod screenshots {
